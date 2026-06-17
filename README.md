@@ -3,7 +3,6 @@
 
 A full end-to-end Data Warehouse built on SQL Server, integrating data from two operational source systems (CRM and ERP) through a **Medallion Architecture** (Bronze → Silver → Gold). The project covers raw ingestion, data cleansing and standardization, and a business-ready dimensional model ready for reporting and BI tooling.
 
-> 📌 *Built as a portfolio project to demonstrate end-to-end data engineering skills — from raw ingestion to dimensional modeling.*
 
 ---
 
