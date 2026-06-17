@@ -104,17 +104,17 @@ The Gold layer implements a **star schema** optimized for reporting and BI tools
 
 ```
                     ┌──────────────────────┐
-                    │   gold.dim_customers  │
-                    │  customer_key (PK)    │
-                    │  customer_id          │
-                    │  name, country, ...   │
+                    │  gold.dim_customers  │
+                    │  customer_key (PK)   │
+                    │  customer_id         │
+                    │  name, country, ...  │
                     └──────────┬───────────┘
                                │
 ┌──────────────────────┐       │       ┌──────────────────────┐
-│   gold.dim_products   │       │       │    gold.fact_sales    │
-│  product_key (PK)    │◄──────┼──────►│  order_number (PK)   │
+│   gold.dim_products  │       │       │  gold.fact_sales     │
+│  product_key (PK)    │───────┼──────►│  order_number (PK)   │
 │  product_name        │       │       │  customer_key (FK)   │
-│  category, cost, ... │       └───────┤  product_key (FK)    │
+│  category, cost, ... │       └──────►│  product_key (FK)    │
 └──────────────────────┘               │  order_date          │
                                        │  sales_amount        │
                                        │  quantity, price, ...│
