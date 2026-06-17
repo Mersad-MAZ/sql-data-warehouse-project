@@ -1,9 +1,5 @@
 # 🏗️ SQL Data Warehouse Project
 
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoft-sql-server&logoColor=white)
-![T-SQL](https://img.shields.io/badge/T--SQL-blue?style=flat)
-![Architecture](https://img.shields.io/badge/Architecture-Medallion-gold?style=flat)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat)
 
 A full end-to-end Data Warehouse built on SQL Server, integrating data from two operational source systems (CRM and ERP) through a **Medallion Architecture** (Bronze → Silver → Gold). The project covers raw ingestion, data cleansing and standardization, and a business-ready dimensional model ready for reporting and BI tooling.
 
