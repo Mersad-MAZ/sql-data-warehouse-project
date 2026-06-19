@@ -35,7 +35,7 @@ The pipeline follows the **Medallion Architecture** pattern — a layered approa
 │                     BRONZE LAYER                            │
 │              Raw ingestion — no transformations             │
 │   crm_cust_info │ crm_prd_info │ crm_sales_details          │
-│   erp_cust_az12 │ erp_loc_a101 │ erp_px_cat_g1v2           │
+│   erp_cust_az12 │ erp_loc_a101 │ erp_px_cat_g1v2            │
 └───────────────────────┬─────────────────────────────────────┘
                         │  Cleanse & Standardize
                         ▼
@@ -43,14 +43,14 @@ The pipeline follows the **Medallion Architecture** pattern — a layered approa
 │                     SILVER LAYER                            │
 │      Deduplicated, standardized, null-handled records       │
 │   crm_cust_info │ crm_prd_info │ crm_sales_details          │
-│   erp_cust_az12 │ erp_loc_a101 │ erp_px_cat_g1v2           │
+│   erp_cust_az12 │ erp_loc_a101 │ erp_px_cat_g1v2            │
 └───────────────────────┬─────────────────────────────────────┘
                         │  Dimensional Modeling
                         ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      GOLD LAYER                             │
 │           Business-ready star schema for analytics          │
-│     gold.dim_customers │ gold.dim_products │ gold.fact_sales │
+│    gold.dim_customers │ gold.dim_products │ gold.fact_sales │
 └─────────────────────────────────────────────────────────────┘
 ```
 
